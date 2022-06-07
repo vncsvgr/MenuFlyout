@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:MenuFlyout"
+             x:Class="MenuFlyout.MainPage"
+             FlyoutBackgroundColor="LightGray">
+
+    <Shell.FlyoutHeader>
+        <ContentView HeightRequest="100">
+            <Image Source="arrow" />
+        </ContentView>
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems" Shell.TabBarIsVisible="False">
+        
+        <ShellContent Title="Facebook" Icon="facebook" ContentTemplate="{DataTemplate pages:Page1}" />
+
+        <ShellContent Title="Instagram" Icon="whatsapp" ContentTemplate="{DataTemplate pages:Page2}" />
+
+        <ShellContent Title="Twitter" Icon="twitter" ContentTemplate="{DataTemplate pages:Page3}" />
+
+        <ShellContent Title="Reddit" Icon="reddit" ContentTemplate="{DataTemplate pages:Page4}" />
+        
+    </FlyoutItem>
+
+    <ShellContent Title="Contato" />
+    <ShellContent Title="Sobre" />
+
+    <Shell.FlyoutFooter>
+        <ContentView HeightRequest="30">
+            <Label Text="Desenvolvido por Vinícius"  HorizontalOptions="Center"/>
+        </ContentView>
+    </Shell.FlyoutFooter>
+
+</Shell>
